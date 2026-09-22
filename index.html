@@ -128,9 +128,6 @@
   .tag.ok { background: #e7f6ee; color: #1c7a4f; border: 1px solid #b8e3cd; }
   .tag.mid { background: #fdf6e3; color: #9a6b00; border: 1px solid #f0dca0; }
   .tag.no { background: #fdecec; color: #b23a3a; border: 1px solid #f3c5c5; }
-  .rev-title { font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--gray-500); margin: 7px 0 3px; }
-  .rev { margin: 0 0 0 15px; }
-  .rev li { font-size: 12px; color: var(--gray-700); margin-bottom: 2px; line-height: 1.4; }
 
   footer { text-align: center; color: var(--gray-500); font-size: 12.5px; padding: 32px 18px 42px; }
   footer b { color: var(--navy); }
@@ -174,8 +171,6 @@
     table.rubric td[data-l]::before { content: attr(data-l); display: block; font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 5px; }
     table.rubric tr td:nth-child(1) { background: var(--navy) !important; }
     table.rubric tr td:nth-child(1) b { color: #fff; }
-    table.rubric tr td:nth-child(1) .rev-title { color: var(--gold); }
-    table.rubric tr td:nth-child(1) .rev li { color: #cdd8e8; }
     table.rubric td.pts { background: var(--vanilla) !important; color: var(--navy); font-weight: 700; }
     table.rubric tr.total td:nth-child(1) { background: var(--navy) !important; }
   }
@@ -511,60 +506,52 @@
       </thead>
       <tbody>
         <tr>
-          <td>
-            <b>1. Formato del informe</b>
-            <p class="rev-title">Se revisa</p>
-            <ul class="rev">
-              <li>Portada, índice, introducción, desarrollo, conclusión y fuentes.</li>
-              <li>Letra Arial 12 y texto justificado.</li>
-              <li>Títulos en negrita 16 y subtítulos en negrita 14.</li>
-            </ul>
-          </td>
+          <td><b>1. Formato del informe</b></td>
           <td colspan="3" data-l="Binario">
             <div class="binary">
-              <span class="ok">Cumple todo → 2 pts</span>
-              <span class="no">No cumple → 0 pts</span>
+              <span class="ok"><b>Cumple (2 pts):</b> portada, índice, introducción, desarrollo, conclusión y fuentes; letra Arial 12; texto justificado; títulos en negrita 16 y subtítulos en negrita 14.</span>
+              <span class="no"><b>No cumple (0 pts):</b> falta algún elemento o no respeta la fuente, los tamaños o la alineación.</span>
             </div>
           </td>
           <td class="pts">2</td>
         </tr>
         <tr>
-          <td><b>2. Tamaño del informe</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Extensión total del documento.</li></ul></td>
-          <td data-l="3 pts"><span class="tag ok">Entre 5 y 10 páginas.</span></td>
-          <td data-l="2 pts"><span class="tag mid">Ligeramente fuera (4, 11 o 12).</span></td>
-          <td data-l="1 pt"><span class="tag no">Menos de 4 o más de 12.</span></td>
+          <td><b>2. Tamaño del informe</b></td>
+          <td data-l="3 pts"><span class="tag ok">5 a 10 páginas.</span></td>
+          <td data-l="2 pts"><span class="tag mid">Ligeramente fuera: 4, 11 o 12 páginas.</span></td>
+          <td data-l="1 pt"><span class="tag no">Menos de 4 o más de 12 páginas.</span></td>
           <td class="pts">3</td>
         </tr>
         <tr>
-          <td><b>3. Calidad del informe</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Claridad, profundidad y lenguaje propio.</li><li>Ejemplos y coherencia de la información.</li><li>Revisión y corrección de lo generado por IA.</li></ul></td>
-          <td data-l="3 pts"><span class="tag ok">Profundo y claro, con lenguaje propio; se nota que revisó y corrigió lo generado por IA.</span></td>
-          <td data-l="2 pts"><span class="tag mid">Correcto pero superficial o con poca revisión.</span></td>
-          <td data-l="1 pt"><span class="tag no">Copiado sin revisar; con errores evidentes.</span></td>
+          <td><b>3. Calidad del informe</b></td>
+          <td data-l="3 pts"><span class="tag ok">Contenido profundo, claro y en tus palabras, con ejemplos y coherencia; se nota que revisaste y corregiste lo generado por IA.</span></td>
+          <td data-l="2 pts"><span class="tag mid">Contenido correcto pero superficial o con poca revisión propia.</span></td>
+          <td data-l="1 pt"><span class="tag no">Copiado de la IA sin revisar; con errores evidentes.</span></td>
           <td class="pts">3</td>
         </tr>
         <tr>
-          <td><b>4. Inclusión de imágenes</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Cantidad de imágenes.</li><li>Que sean pertinentes y coherentes con el texto (las capturas de modelos no cuentan).</li></ul></td>
-          <td data-l="3 pts"><span class="tag ok">5 o más imágenes pertinentes.</span></td>
-          <td data-l="2 pts"><span class="tag mid">1 a 4 imágenes.</span></td>
+          <td><b>4. Inclusión de imágenes</b></td>
+          <td data-l="3 pts"><span class="tag ok">5 o más imágenes, todas pertinentes y coherentes con el texto.</span></td>
+          <td data-l="2 pts"><span class="tag mid">1 a 4 imágenes pertinentes.</span></td>
           <td data-l="1 pt"><span class="tag no">Ninguna imagen (solo texto).</span></td>
           <td class="pts">3</td>
         </tr>
         <tr>
-          <td><b>5. Inclusión de modelos de IA</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Número de modelos usados.</li><li>Capturas de pantalla en la sección de Anexos.</li></ul></td>
-          <td data-l="3 pts"><span class="tag ok">3 modelos (ChatGPT, Gemini, DeepSeek) con capturas en Anexos.</span></td>
-          <td data-l="2 pts"><span class="tag mid">2 modelos con capturas.</span></td>
+          <td><b>5. Inclusión de modelos de IA</b></td>
+          <td data-l="3 pts"><span class="tag ok">Los 3 modelos (ChatGPT, Gemini, DeepSeek) documentados con capturas de pantalla en Anexos.</span></td>
+          <td data-l="2 pts"><span class="tag mid">2 modelos documentados con capturas en Anexos.</span></td>
           <td data-l="1 pt"><span class="tag no">1 solo modelo o sin capturas.</span></td>
           <td class="pts">3</td>
         </tr>
         <tr>
-          <td><b>6. Presentación con NotebookLM</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Herramienta con la que se hizo.</li><li>Si se expuso en clase.</li></ul></td>
-          <td data-l="3 pts"><span class="tag ok">Hecha con <b>NotebookLM</b> y <b>expuesta</b>.</span></td>
+          <td><b>6. Presentación con NotebookLM</b></td>
+          <td data-l="3 pts"><span class="tag ok">Hecha con <b>NotebookLM</b> y <b>expuesta</b> en clase.</span></td>
           <td data-l="2 pts"><span class="tag mid">Con NotebookLM y no expuesta, o con otro editor y sí expuesta.</span></td>
           <td data-l="1 pt"><span class="tag no">Con otro editor y no expuesta.</span></td>
           <td class="pts">3</td>
         </tr>
         <tr>
-          <td><b>7. Entrega a tiempo</b><p class="rev-title">Se revisa</p><ul class="rev"><li>Fecha en que se entrega.</li></ul></td>
+          <td><b>7. Entrega a tiempo</b></td>
           <td data-l="3 pts"><span class="tag ok">Hasta el <b>26 de septiembre</b>.</span></td>
           <td data-l="2 pts"><span class="tag mid">Hasta el <b>3 de octubre</b>.</span></td>
           <td data-l="1 pt"><span class="tag no">Hasta el <b>10 de octubre</b>.</span></td>
